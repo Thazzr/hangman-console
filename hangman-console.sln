@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.4.33110.190
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "hangman-console", "hangman-console\hangman-console.csproj", "{2445D895-48E7-437D-8308-94C423D8ECF1}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{2445D895-48E7-437D-8308-94C423D8ECF1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2445D895-48E7-437D-8308-94C423D8ECF1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2445D895-48E7-437D-8308-94C423D8ECF1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2445D895-48E7-437D-8308-94C423D8ECF1}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {43AC55C1-C296-4966-BB33-337AB150F477}
+	EndGlobalSection
+EndGlobal
