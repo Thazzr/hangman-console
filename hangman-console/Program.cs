@@ -6,9 +6,12 @@
         {
             List<string> Words = new List<string>();
             List<string> RndWords = new List<string>();
-            bool doubleword = false;
-            string wordtemp;
             Random rnd = new Random();
+            int randomword;
+            int wordNr = 0;
+            int selectedword;
+            int faultcount;
+            bool inputgood = false;
 
             Words.Add("Hase");
             Words.Add("Raumschiff");
@@ -19,64 +22,48 @@
             Words.Add("Burgverlies");
             Words.Add("lizensieren");
 
-            for (int i = 0; i < 5;)
+            for (int i = 0; i < 5; i++)
             {
-                wordtemp = Words[rnd.Next(Words.Count())];
-                foreach (string word in RndWords) 
-                { 
-                    
-                    if (word == wordtemp)
-                    {
-                        doubleword = true;
-                        break;
-                    }
-                }
-                if (!doubleword)
-                {
-                    RndWords.Add(wordtemp);
-                    i++;
-                }
-                RndWords.Add(Words[rnd.Next(Words.Count())]);
+                randomword = rnd.Next(Words.Count());
+                RndWords.Add(Words[randomword]);
+                Words.Remove(Words[randomword]);
             }
+
             
 
+           
 
-            Console.WriteLine(rnd.Next(Words.Count()));
+            while (!inputgood)
+            {
+                Console.WriteLine("Ein Wort wählen. \nZahl des Wortes eingeben und Enter drücken\n");
+
+                foreach (string word in RndWords)
+                {
+
+                    Console.Write(wordNr + ": ");
+                    foreach (char n in word)
+                    {
+                        Console.Write("_");
+                    }
+                    Console.WriteLine();
+                    wordNr++;
+                }
+
+                Console.Write("\nZahl: ");
+                inputgood = int.TryParse(Console.ReadLine(), out selectedword);
+                wordNr= 0;
+                if (!(inputgood && selectedword >= 0 && selectedword <= 4))
+                {
+                    inputgood = false;
+                }
+                Console.Clear();
+            }
+
+            Console.Clear();
 
 
-            //for (int i = 0; i < 5; i++)
-            //{
-                
-            //    doublenumber = false;
-            //    foreach (int n in RndNumbers)
-            //    {
-            //      if (i == n)
-            //        {
-            //            doublenumber= true;
-            //        }
-            //    }
-            //    if (!doublenumber)
-            //    {
-            //        RndNumbers.Add(i);
-            //    }
-                
-
-            //}
-            
-
-
-
-            //foreach (string word in Words)
-            //{
-            //    Console.Write(i + " ");
-            //    foreach (char n in word)
-            //    {
-            //        Console.Write("_");
-            //    }
-            //    Console.WriteLine();
-            //    i++;
-            //}
-
+            Console.WriteLine("  +---+\r\n  |   |\r\n      |\r\n      |\r\n      |\r\n      |\r\n============");
+            Console.WriteLine("selectedword");
         }
     }
 }
