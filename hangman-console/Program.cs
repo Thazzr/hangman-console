@@ -65,10 +65,18 @@ for (; ; ) //loop to keep console alive and repeat game
 
     while (!inputgood)
     {
-        Console.WriteLine("Ein Wort wählen. 99 = Exit \nZahl des Wortes eingeben und Enter drücken\n");
+        Console.WriteLine("Hallo Spieler.\nEs befinden sich "
+            + 
+            (Words.Count() + 5)
+            +
+            " Woerter in der Datenbank, von dennen wir 5 nur fuer dich ausgewaehlt haben.\n" 
+            +
+            "Bitte gib die Zahl des Wortes ein, dass du erraten moechtest oder beende das Spiel durch eingabe der Zahl 99\n");
+
+
         foreach (string word in RndWords)
         {
-
+            Console.ForegroundColor = ConsoleColor.Green;
             Console.Write(wordNr + ": ");
             foreach (char n in word)
             {
@@ -85,7 +93,7 @@ for (; ; ) //loop to keep console alive and repeat game
             Console.WriteLine();
             wordNr++;
         }
-
+        Console.ForegroundColor = startColor;
         Console.Write("\nZahl: ");
         inputgood = int.TryParse(Console.ReadLine(), out selectedword);
 
