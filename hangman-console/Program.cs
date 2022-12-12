@@ -23,6 +23,7 @@ bool win = false;
 string wordplay = "";
 bool inputok;
 bool cheat = false;
+int cheatquote;
 
 for (; ; ) //loop to keep console alive and repeat game
 {
@@ -271,7 +272,28 @@ for (; ; ) //loop to keep console alive and repeat game
                 Console.ForegroundColor = ConsoleColor.Green;
                 if (cheat) 
                 {
-                    Console.WriteLine("\nCheater!!!!");
+                    Console.ForegroundColor = ConsoleColor.Red;
+                    cheatquote = rnd.Next(4);
+                    switch (cheatquote)
+                    {
+                        case 0:
+                            Console.WriteLine("\nOne lie is enough to question all the truth.");
+                            break;
+                        case 1:
+                            Console.WriteLine("\nI don't understand why people cheat.");
+                            break;
+                        case 2:
+                            Console.WriteLine("\nCheating is a choice, not a mistake");
+                            break;
+                        case 3:
+                            Console.WriteLine("\nYou Cheated Not Only the Game, But Yourself");
+                            break;
+                        case 4:
+                            Console.WriteLine("\nWhy did you do this?");
+                            break;
+
+                    }
+                    Console.WriteLine("Druecke die Enter-Taste um das Spiel neu zu starten\nwomoeglich ohne zu schummeln?");
                 }
                 else
                 {
