@@ -24,9 +24,9 @@ string wordplay = "";
 bool inputok;
 bool cheat = false;
 
-for (; ; )
+for (; ; ) //loop to keep console alive and repeat game
 {
-    while (!initdone)
+    while (!initdone) //init data
     {
         Words.Clear();
         RndWords.Clear();
@@ -40,7 +40,18 @@ for (; ; )
         Words.Add("Operator");
         Words.Add("Schleife");
         Words.Add("Debuggen");
-        Words.Add("Leer Test");
+        Words.Add("Algorithmus");
+        Words.Add("Float");
+        Words.Add("Integer");
+        Words.Add("Schlüsselwort");
+        Words.Add("Syntaxfehler");
+        Words.Add("Zuweisung");
+        Words.Add("c sharp");
+        Words.Add("Boolean");
+        Words.Add("Computer");
+        Words.Add("GitHub");
+        Words.Add("GitLab");
+        Words.Add("Shell");
         Chars.Add(' ');
 
         for (int i = 0; i < 5; i++)
