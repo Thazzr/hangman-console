@@ -257,7 +257,7 @@ for (; ; ) //loop to keep console alive and repeat game
                         }
                         break;
                     case 6:
-                        Console.WriteLine("Leider Verloren! :/\ndas gesuchte Worte waere " + secredword + " gewesen\nViel Glueck beim nächsten versuch.\nzum Wiederholen Enter drücken");
+                        Console.WriteLine("Leider Verloren! :/\ndas gesuchte Worte waere " + secredword + " gewesen\nViel Glueck beim nächsten Versuch.\nzum Wiederholen Enter druecken");
                         Console.ReadLine();
                         faultcount++;
                         break;
@@ -275,7 +275,7 @@ for (; ; ) //loop to keep console alive and repeat game
                 }
                 else
                 {
-                    Console.WriteLine("\nGlueckwunsch du hast das Wort erraten.");
+                    Console.WriteLine("\nGlueckwunsch du hast das Wort erraten.\nzum Wiederholen Enter druecken");
                 }
                 Console.ReadLine();
                 Console.Clear();
